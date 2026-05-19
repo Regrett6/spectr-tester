@@ -52,7 +52,36 @@
             }
         }
 
-        
+        /* Custom checkbox */
+        .custom-checkbox {
+            position: absolute;
+            opacity: 0;
+        }
+        .custom-checkbox + label {
+            position: relative;
+            cursor: pointer;
+            padding-left: 2rem;
+        }
+        .custom-checkbox + label:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 1.5rem;
+            height: 1.5rem;
+            border: 2px solid #10b981;
+            border-radius: 4px;
+            background: white;
+        }
+        .custom-checkbox:checked + label:after {
+            content: "✓";
+            position: absolute;
+            left: 0.35rem;
+            top: -0.1rem;
+            font-size: 1.2rem;
+            color: #10b981;
+            font-weight: bold;
+        }
 
         /* Commit Buttons Container */
         #commit-buttons {
